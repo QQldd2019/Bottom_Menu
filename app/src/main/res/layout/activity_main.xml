@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/divide"
+        android:layout_alignParentTop="true">
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divide"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/activity_group_radioGroup"
+        android:background="#cccccc"/>
+
+    <RadioGroup
+        android:id="@+id/activity_group_radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:checkedButton="@+id/order_process"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp">
+
+        <RadioButton
+            android:id="@+id/order_process"
+            style="@style/main_tab_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/main_tab_1"
+            android:gravity="center"
+            android:text="订单处理"/>
+
+        <RadioButton
+            android:id="@+id/order_query"
+            style="@style/main_tab_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:checked="false"
+            android:drawableTop="@drawable/main_tab_2"
+            android:gravity="center"
+            android:text="订单查询"/>
+
+        <RadioButton
+            android:id="@+id/merchant_manager"
+            style="@style/main_tab_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:checked="false"
+            android:drawableTop="@drawable/main_tab_3"
+            android:gravity="center"
+            android:text="门店管理"/>
+
+        <RadioButton
+            android:id="@+id/setting"
+            style="@style/main_tab_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:checked="false"
+            android:drawableTop="@drawable/main_tab_4"
+            android:gravity="center"
+            android:text="设置"/>
+        <RadioButton
+            android:id="@+id/qushi"
+            style="@style/main_tab_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:checked="false"
+            android:drawableTop="@drawable/main_tab_4"
+            android:gravity="center"
+            android:text="趋势"/>
+    </RadioGroup>
+
+
+</RelativeLayout>
